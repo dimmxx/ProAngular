@@ -1,0 +1,35 @@
+<html>
+<header>
+    <title></title>
+    <script>
+        "use strict";
+
+        // Function expression
+
+        let sayHi = function() {
+            alert( "Hello!" );
+        };
+        sayHi();
+        alert(sayHi);
+        alert(sayHi()); // Hello -> undefined
+
+
+        let sayBye = function() {
+            return "Bye!";
+        };
+        alert(sayBye());
+        alert(sayBye);
+
+        let newFunc = sayBye;
+        alert(newFunc());
+
+        let newFunc1 = sayBye(); // writing the result calling function into the variable newFunc1
+        alert(newFunc1 + ': newFunc');
+
+
+
+    </script>
+</header>
+<body>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<header>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <script>
+    "use strict";
+
+    function display(arg) {
+        document.write(arg);
+    }
+
+    function showMessage(from, text) { // аргументы: from, text
+        return(from + ': ' + text);
+    }
+
+</script>
+</header>
+<body>
+<h3>Click the following buttons to see functions in action</h3>
+<br>
+<br>
+<input type = "button" onclick = "display(showMessage('Аня', 'Как дела?'))" value = "showMessageNormal">
+<br>
+<br>
+<input type = "button" onclick = "display(showMessage())" value = "showMessageUbderfined">
+
+</body>
+</html>

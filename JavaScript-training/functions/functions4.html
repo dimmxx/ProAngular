@@ -1,0 +1,25 @@
+<html>
+<header>
+    <title></title>
+    <script>
+        "use strict";
+
+        function doNothing() { /* пусто */
+        }
+
+        alert(doNothing() === undefined); // true
+        alert(doNothing()); // undefined
+
+        function doNothing1() {
+            return;
+        }
+
+        alert(doNothing1() === undefined); // true
+        alert(doNothing1()); // true
+
+
+    </script>
+</header>
+<body>
+</body>
+</html>

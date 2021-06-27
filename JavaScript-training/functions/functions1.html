@@ -1,0 +1,32 @@
+<html>
+<header>
+    <title></title>
+<script>
+    "use strict";
+
+    function showMessage(from, text = 'no text') { // аргументы: from, text
+        alert(from + ': ' + text);
+    }
+    showMessage('John'); //undefined
+
+
+    //==================================================================================================================
+
+
+    function anotherFunction(){
+        return 'no text with function';
+    }
+
+    function showMessage1(from, text = anotherFunction()) { // аргументы: from, text
+        alert(from + ': ' + text);
+    }
+
+    showMessage1('John'); //undefined
+
+
+
+</script>
+</header>
+<body>
+</body>
+</html>

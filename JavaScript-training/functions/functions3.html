@@ -1,0 +1,30 @@
+<html>
+<header>
+    <title></title>
+<script>
+    "use strict";
+
+    function checkAge(age) {
+        if (age > 18) {
+            return true;
+        } else {
+            return confirm('А родители разрешили?');
+        }
+    }
+
+    function showMovie(age) {
+        if ( !checkAge(age) ) {
+            alert( "No movies for you" ); // (*)
+            return;
+        }
+        alert( "Вам показывается кино" ); // (*)
+    }
+
+    let age = prompt('Сколько вам лет?');
+    showMovie(age);
+
+</script>
+</header>
+<body>
+</body>
+</html>
