@@ -9,12 +9,15 @@ import {Model, TodoItem} from './model';
 export class AppComponent {
   model = new Model();
   title = 'tada';
+
   getName(): string {
     return this.model.user;
   }
+
   getToDoItem(): TodoItem[] {
     return this.model.items.filter(item => !item.done);
   }
+
   addItem(action: string): void {
     if (action !== '') {
       this.model.items.push(new TodoItem(action, false));

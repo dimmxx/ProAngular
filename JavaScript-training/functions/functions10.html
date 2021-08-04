@@ -1,0 +1,28 @@
+<html>
+<header>
+    <title></title>
+    <script>
+        "use strict";
+
+        let myFunc = function (name, weather = "raining") {
+            console.log("Hello " + name + ".");
+            console.log("It is " + weather + " today");
+        };
+        myFunc("Adam", "snowing");
+
+        // extra args
+
+        let myFuncEA = function (name, weather, ...extraArgs) {
+            console.log("Hello " + name + "."); console.log("It is " + weather + " today");
+
+            for (let i = 0; i < extraArgs.length; i++) {
+                console.log("It is " + extraArgs[i] + " today.");
+            }
+        };
+        myFuncEA("Adam", "sunny", "raining", "snowing", "hot", "cold");
+
+    </script>
+</header>
+<body>
+</body>
+</html>
