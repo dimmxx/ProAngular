@@ -1,0 +1,61 @@
+<html>
+<header>
+    <title></title>
+    <script>
+        "use strict";
+
+        let myFunc = function (nameFunction) {
+            return ("Hello " + nameFunction() + ".");
+        };
+        console.log(myFunc(function () {
+            return "Adam";
+        }));
+
+        //==============================================================================================================
+
+        let myFunc1 = function (nameFunction) {
+            return ("Bye " + nameFunction() + ".");
+        };
+        let myFunc2 = function () {
+            return "Peter";
+        };
+        console.log(myFunc1(myFunc2));
+
+        //==============================================================================================================
+
+        let longFunc = function (nameFunction) {
+            return ("Good morning " + nameFunction() + ".");
+        };
+
+        let printName = function (nameFunction, printFunction) {
+            printFunction(longFunc(nameFunction));
+        }
+
+        let nameFunction = function (){
+            return "John";
+        }
+
+        printName(nameFunction, console.log);
+
+        //==============================================================================================================
+
+        let myFunc3 = (nameFunction) => ("Hi " + nameFunction() + ".");
+        let myFunc4 =  () => "Mary";
+        console.log(myFunc3(myFunc4));
+
+        //==============================================================================================================
+
+        let longFuncL = (nameFunction) => ("Good afternoon " + nameFunction() + ".");
+
+        let printNameL = (nameFunction, printFunction) => printFunction(longFuncL(nameFunction));
+
+        let nameFunctionL = () => "Daniel";
+
+        printNameL(nameFunctionL, console.log);
+
+
+    </script>
+</header>
+<body>
+</body>
+</html>
